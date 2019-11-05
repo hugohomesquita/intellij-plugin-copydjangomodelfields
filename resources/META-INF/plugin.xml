@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>com.sipesistemas.CopyDjangoModelFields</id>
+    <name>Copy Django Model Fields</name>
+    <version>1.1</version>
+    <vendor email="contato@sipesistemas.com" url="https://sipesistemas.com">Sipe Sistemas</vendor>
+    <depends>com.intellij.modules.python</depends>
+
+    <description><![CDATA[
+      Extension allows you to copy Django model fields and paste them as a tuple of field names.
+    ]]></description>
+
+    <change-notes>
+        <![CDATA[All notable changes to the "django-copy-model-fields" extension will be documented in this file.<br/>
+        Initial release.]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="CopyDjangoModelFields" class="com.sipesistemas.CopyDjangoModelFields"
+                text="Copy Model Fields"
+                description="Extension allows you to copy Django model fields and paste them as a tuple of field names.">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+
+</idea-plugin>
