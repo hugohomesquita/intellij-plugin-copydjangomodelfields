@@ -1,12 +1,12 @@
 <idea-plugin>
     <id>com.sipesistemas.CopyDjangoModelFields</id>
-    <name>Copy Django Model Fields</name>
-    <version>1.1</version>
+    <name>Copy Django Fields</name>
+    <version>1.2</version>
     <vendor email="contato@sipesistemas.com" url="https://sipesistemas.com">Sipe Sistemas</vendor>
     <depends>com.intellij.modules.python</depends>
 
     <description><![CDATA[
-      Extension allows you to copy Django model fields and paste them as a tuple of field names.
+      Extension allows you to copy Django model fields and paste them as a tuple of field names or typescript.
     ]]></description>
 
     <change-notes>
@@ -24,8 +24,13 @@
     <actions>
         <!-- Add your actions here -->
         <action id="CopyDjangoModelFields" class="com.sipesistemas.CopyDjangoModelFields"
-                text="Copy Model Fields"
+                text="Copy Django Fields Dict"
                 description="Extension allows you to copy Django model fields and paste them as a tuple of field names.">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+        <action id="CopyDjangoModelFieldsToTypescript" class="com.sipesistemas.CopyDjangoModelFieldsToTypescript"
+                text="Copy Django Fields Typescript"
+                description="Extension allows you to copy Django model fields and paste them as a typescript types.">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         </action>
     </actions>
